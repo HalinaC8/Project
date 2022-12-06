@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "pages#index"
   # Routes the pages to the home page 
-  get "/pages", to: "pages#index"
-  # Maps GET /pages requests to the index action of PagesController
+
+  resources :pages
+  # Resources maps all of the conventional routes for a collection of resources, such as "pages"
 end
