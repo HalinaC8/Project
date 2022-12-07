@@ -1,0 +1,33 @@
+<%= form_with model: @page do |form| %>
+    <div>
+      <%= form.label :name, "Name of Your Shoe" %><br>
+      <%= form.text_field :name %>
+      <% page.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+<br>
+
+    <div>
+      <%= form.label :condition %><br>
+      <%= form.text_area :condition %><br>
+      <% page.errors.full_messages_for(:condition).each do |message| %>
+        <div><%= message %></div> 
+      <% end %>
+    </div>
+
+<br>
+
+    <div>
+      <%= form.label :price, "Purchase Price" %><br>
+      <%= form.text_field :price %><br>
+      <% page.errors.full_messages_for(:price).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+<br>  
+    <div>
+      <%= form.submit "Submit" %>
+    </div>
+  <% end %>
