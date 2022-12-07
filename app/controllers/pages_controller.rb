@@ -25,6 +25,13 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
   end
 
+  def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
     def page_params
       params.require(:page).permit(:name, :condition, :price)
