@@ -1,4 +1,11 @@
 <%= form_with model: @page do |form| %>
+    
+    <div>
+    <%= link_to "Back to Previous Page", :back %>
+    </div>
+
+    <br>
+
     <div>
       <%= form.label :name, "Name of Your Shoe:" %><br>
       <%= form.text_field :name %>
@@ -7,7 +14,7 @@
       <% end %>
     </div>
 
-<br>
+    <br>
 
     <div>
       <%= form.label :brand, "Brand:" %><br>
@@ -17,17 +24,27 @@
       <% end %>
     </div>
 
-<br>
+    <br>
+
+    <div>
+      <%= form.label :size, "Size:" %><br>
+      <%= form.text_field :size %>
+      <% page.errors.full_messages_for(:size).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <br>
 
     <div>
       <%= form.label :status, "Status:" %><br>
       <%= form.select :status, [['Available'], ['Sold - Not Yet Shipped'], ['Sold - Shipped']] %><br>
-      <% page.errors.full_messages_for(:brand).each do |message| %>
+      <% page.errors.full_messages_for(:status).each do |message| %>
         <div><%= message %></div> 
       <% end %>
     </div>
 
-<br>
+    <br>
 
     <div>
       <%= form.label :condition, "Condition:" %><br>
@@ -37,7 +54,7 @@
       <% end %>
     </div>
 
-<br>
+    <br>
 
     <div>
       <%= form.label :box, "Original Box:" %><br>
@@ -47,14 +64,14 @@
       <% end %>
     </div>
 
-<br>
+    <br>
     
     <div>
       <%= form.label "Upload Photo" %>
-      <%= form.file_field :avatar %><br>
+      <%= form.file_field :image %><br>
     </div>
 
-<br>
+    <br>
 
     <div>
       <%= form.label :price1, "Purchase Price:" %><br>
@@ -64,9 +81,9 @@
       <% end %>
     </div>
 
-<br>  
+    <br>  
 
-<div>
+    <div>
       <%= form.label :price2, "Sold For:" %><br>
       <%= form.text_field :price2 %><br>
       <% page.errors.full_messages_for(:price2).each do |message| %>
@@ -74,7 +91,7 @@
       <% end %>
     </div>
 
-<br>  
+    <br>  
 
     <div>
       <%= form.submit "Submit" %>

@@ -1,11 +1,23 @@
 <h1>Shoe Therapy</h1>
 
-<ul>
-  <% @pages.each do |page| %>
-    <li>
-      <%= link_to page.title, page %>
-    </li>
-  <% end %>
-</ul>
-
 <%= link_to "Add a New Shoe", new_page_path %>
+<br>
+<section>
+  <% @pages.each do |page| %>
+    <article>
+      <%= link_to page.name, page %>
+      <p> Brand: <%= page.brand %></p>
+      <p> Size: <%= page.size %></p>
+      <p> Status: <%= page.status %></p>
+      <p> Condition: <%= page.condition %></p>
+      <p> Original Box: <%= page.box %></p>
+      <p><%= image_tag page.image, :style => "max-height:300px" %></p>
+      <p> Purchase Price: <%= page.price1 %></p>
+      <p> Sold For: <%= page.price2 %></p>
+    </article>
+  <% end %>
+</section>
+
+
+
+

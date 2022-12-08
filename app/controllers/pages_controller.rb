@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 
   def create 
     @page = Page.new(page_params)
+    # debugger
 
     if @page.save
       redirect_to @page
@@ -34,6 +35,6 @@ class PagesController < ApplicationController
 
   private
     def page_params
-      params.require(:page).permit(:name, :condition, :price)
+      params.require(:page).permit(:name, :brand, :size, :condition, :box, :image, :price1, :price2)
     end
 end
