@@ -1,17 +1,17 @@
-<h1>Shoe Therapy</h1>
+<h1>SHOE THERAPY</h1>
 
-<%= link_to "Add a New Shoe", new_page_path %>
+<nav><%= link_to "ADD A NEW SHOE", new_page_path %></nav>
 <br>
 <section>
   <% @pages.each do |page| %>
     <article>
-      <%= link_to page.name, page %>
-      <p> Brand: <%= page.brand %></p>
+      <%= link_to page.name.upcase, page %>
+      <p id= 'Brand'> Brand: <%= page.brand %></p>
       <p> Size: <%= page.size %></p>
       <p> Status: <%= page.status %></p>
       <p> Condition: <%= page.condition %></p>
       <p> Original Box: <%= page.box %></p>
-      <p><%= image_tag page.image, :style => "max-height:300px" %></p>
+      <%= image_tag page.image, :style => "max-height:300px" %>
       <p> Purchase Price: <%= page.price1 %></p>
       <p> Sold For: <%= page.price2 %></p>
     </article>

@@ -15,16 +15,87 @@
  */
 
 a {
-    color: red;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Klee One', cursive;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black   
+}
+
+h1 {
+    text-align: center;
+    font-size:500%;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Klee One', cursive;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+    margin: 5px;
+}
+
+nav {
+    text-align: center;
 }
 
 article {
-    border: 3px solid red;
-    padding: 25px;
-    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px;
+    width: 275px;
+    height: 500px;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Klee One', cursive;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black
+    
 }
 
 section {
-    margin: 25px
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+img {
+    width: 85%;
+    align-self: center;
+
+
+}
+
+#Brand {
+    margin-top: 20px;
+    color: blue;
+} 
+
+#form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+}
+
+#form {
+    height: 70vh;
+    width: 50vw;
+
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
