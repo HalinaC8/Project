@@ -1,20 +1,29 @@
-<h1><%= @page.title %></h1>
+<h1>SHOE THERAPY</h1>
 
-<h2><%= link_to "Back to Previous Page", :back %></h2>
+<nav>
+<%= button_to link_to "BACK TO PREVIOUS PAGE", :back %>
+<%= button_to link_to "HOME PAGE", :root %>
+<nav>
 
-<p> Brand: <%= @page.brand %></p>
-<p> Size: <%= @page.size %></p>
-<p> Status: <%= @page.status %></p>
-<p> Condition: <%= @page.condition %></p>
-<p> Original Box: <%= @page.box %></p>
-<p><%= image_tag @page.image, :style => "max-height:300px" %></p>
-<p> Purchase Price: <%= @page.price1 %></p>
-<p> Sold For: <%= @page.price2 %></p>
+<br>
 
-<ul>
-    <li><%= link_to "Edit", edit_page_path(@page) %></li>
-    <li><%= link_to "Delete", page_path(@page), data: {
+<article>
+    <p> BRAND: <%= @page.brand %></p>
+    <p> SIZE: <%= @page.size %></p>
+    <p> STATUS: <%= @page.status %></p>
+    <p> CONDITION: <%= @page.condition %></p>
+    <p> ORIGINAL BOX: <%= @page.box %></p>
+    <p><%= image_tag @page.image, :style => "max-height:300px" %></p>
+    <p> PURCHASE PRICE: <%= @page.price1 %></p>
+    <p> SOLD FOR: <%= @page.price2 %></p>
+</article>
+
+<br>
+
+<nav>
+    <a><%= button_to link_to "EDIT", edit_page_path(@page) %></a>
+    <a><%= button_to link_to "DELETE", page_path(@page), data: {
                         turbo_method: :delete,
                         turbo_confirm: "Are you sure?"
-                        } %></li>
-</ul>
+                        } %></a>
+</nav>

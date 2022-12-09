@@ -25,6 +25,16 @@ class PagesController < ApplicationController
   def edit
     @page = Page.find(params[:id])
   end
+    
+  def update
+    @page = Page.find(params[:id])
+    
+    if @page.update(page_params)
+      redirect_to @page
+    else
+      render :edit, status: :unprocessable_entity
+  end
+end
 
   def destroy
     @page = Page.find(params[:id])
@@ -35,6 +45,6 @@ class PagesController < ApplicationController
 
   private
     def page_params
-      params.require(:page).permit(:name, :brand, :size, :condition, :box, :image, :price1, :price2)
+      params.require(:page).permit(:name, :brand, :size, :status, :condition, :box, :image, :price1, :price2)
     end
 end

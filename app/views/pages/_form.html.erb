@@ -1,13 +1,9 @@
 <%= form_with model: @page do |form| %>
     
-    <div>
-        <%= link_to "Back to Previous Page", :back %>
-    </div>
-
     <br>
 
     <div>
-      <%= form.label :name, "Name of Your Shoe:" %><br>
+      <%= form.label :name, "NAME OF YOUR SHOE:" %><br>
       <%= form.text_field :name %>
       <% page.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
@@ -17,7 +13,7 @@
     <br>
 
     <div>
-      <%= form.label :brand, "Brand:" %><br>
+      <%= form.label :brand, "BRAND:" %><br>
       <%= form.text_field :brand %><br>
       <% page.errors.full_messages_for(:brand).each do |message| %>
         <div><%= message %></div> 
@@ -27,7 +23,7 @@
     <br>
 
     <div>
-      <%= form.label :size, "Size:" %><br>
+      <%= form.label :size, "SIZE:" %><br>
       <%= form.text_field :size %>
       <% page.errors.full_messages_for(:size).each do |message| %>
         <div><%= message %></div>
@@ -37,7 +33,7 @@
     <br>
 
     <div>
-      <%= form.label :status, "Status:" %><br>
+      <%= form.label :status, "STATUS:" %><br>
       <%= form.select :status, [['Available'], ['Sold - Not Yet Shipped'], ['Sold - Shipped']] %><br>
       <% page.errors.full_messages_for(:status).each do |message| %>
         <div><%= message %></div> 
@@ -47,7 +43,7 @@
     <br>
 
     <div>
-      <%= form.label :condition, "Condition:" %><br>
+      <%= form.label :condition, "CONDITION:" %><br>
       <%= form.select :condition, [['New - Never Worn'], ['Excellent Used Condition'], ['Good Used Condition'], ['Very Used Condition']] %><br>
       <% page.errors.full_messages_for(:condition).each do |message| %>
         <div><%= message %></div> 
@@ -57,7 +53,7 @@
     <br>
 
     <div>
-      <%= form.label :box, "Original Box:" %><br>
+      <%= form.label :box, "ORIGINAL BOX:" %><br>
       <%= form.select :box, [['Yes'], ['No']] %><br>
       <% page.errors.full_messages_for(:box).each do |message| %>
         <div><%= message %></div> 
@@ -67,14 +63,14 @@
     <br>
     
     <div>
-      <%= form.label "Upload Photo" %>
+      <%= form.label "UPLOAD PHOTO" %>
       <%= form.file_field :image %><br>
     </div>
 
     <br>
 
     <div>
-      <%= form.label :price1, "Purchase Price:" %><br>
+      <%= form.label :price1, "PURCHASE PRICE:" %><br>
       <%= form.text_field :price1 %><br>
       <% page.errors.full_messages_for(:price1).each do |message| %>
         <div><%= message %></div>
@@ -84,7 +80,7 @@
     <br>  
 
     <div>
-      <%= form.label :price2, "Sold For:" %><br>
+      <%= form.label :price2, "SOLD FOR:" %><br>
       <%= form.text_field :price2 %><br>
       <% page.errors.full_messages_for(:price2).each do |message| %>
         <div><%= message %></div>
@@ -94,7 +90,7 @@
     <br>  
 
     <div>
-      <%= form.submit "Submit" %>
+      <%= form.submit "SUBMIT" %>
     </div>
   <% end %>
   

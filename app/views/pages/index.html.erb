@@ -1,12 +1,14 @@
 <h1>SHOE THERAPY</h1>
 
-<nav><%= link_to "ADD A NEW SHOE", new_page_path %></nav>
+<nav>
+  <a><%= button_to link_to "ADD A NEW SHOE", new_page_path %></a>
+</nav>
 <br>
 <section>
   <% @pages.each do |page| %>
     <article>
       <%= link_to page.name.upcase, page %>
-      <p id= 'Brand'> Brand: <%= page.brand %></p>
+      <p id= 'Brand'> Brand: <%= page.brand.upcase %></p>
       <p> Size: <%= page.size %></p>
       <p> Status: <%= page.status %></p>
       <p> Condition: <%= page.condition %></p>
