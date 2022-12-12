@@ -1,11 +1,14 @@
 <h1>SHOE THERAPY</h1>
 
-<button>
+<nav>
 <%= button_to link_to "BACK TO PREVIOUS PAGE", :back %>
 <%= button_to link_to "HOME PAGE", :root %>
-</button>
+</nav>
 
 <h2>EDIT SHOE</h2>
 
+<article id= 'form'> 
 <%= render "form", page: @page %>
+</article>
+
 
