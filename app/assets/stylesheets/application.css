@@ -35,6 +35,20 @@ h1 {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid white;
+    background-color: white;
+}
+
+h2{
+    font-family: 'Corinthia', cursive;
+    font-family: 'Klee One', cursive;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px;
+    
 }
 
 p {
@@ -60,7 +74,8 @@ article {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif;
-    color: black
+    color: black;
+    background-color: white;
     
 }
 
@@ -77,15 +92,10 @@ img {
     align-self: center;
 }
 
-#Brand {
-    margin-top: 20px;
-    color: blue;
-} 
 #form div {
     display: flex;
     flex-direction: row;
-    margin-top: 18px;
-    
+    margin-top: 10px;
 }
 
 *form {
@@ -104,7 +114,8 @@ img {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif;
-    color: black      
+    color: black;  
+    background-color: white;
 } 
 
 input {
@@ -120,6 +131,8 @@ body {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif; 
+    background-image: url("https://previews.123rf.com/images/belusuab/belusuab1811/belusuab181100044/112650526-abstract-black-and-white-watercolor-floral-seamless-pattern-flowers-twigs-leaves-buds-hand-painted-v.jpg");
+    
 }
 
 button {
@@ -133,3 +146,4 @@ button {
 button:hover {
     background-color: rgb(214, 214, 214)
 }
+
