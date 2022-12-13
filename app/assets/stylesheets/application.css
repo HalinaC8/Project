@@ -35,8 +35,13 @@ h1 {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif;
-    border: 1px solid white;
+    border: 1px solid black;
     background-color: white;
+    padding-left: 100%;
+    padding-right:100%;
+   
+   
+    
 }
 
 h2{
@@ -85,6 +90,7 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+
 }
 
 img {
@@ -131,7 +137,21 @@ body {
     font-family: 'Monsieur La Doulaise', cursive;
     font-family: 'Petit Formal Script', cursive;
     font-family: 'Roboto Condensed', sans-serif; 
-    background-image: url("https://previews.123rf.com/images/belusuab/belusuab1811/belusuab181100044/112650526-abstract-black-and-white-watercolor-floral-seamless-pattern-flowers-twigs-leaves-buds-hand-painted-v.jpg");
+    margin: 0;
+    
+}
+
+html {
+    height: 100%;
+}
+
+.background_image {
+     background-image: url(/assets/backgroundimg.png);
+     background-position: center;
+     height: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
 }
 
 button {
