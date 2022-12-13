@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def create 
     @page = Page.new(page_params)
-    # debugger
+
 
     if @page.save
       redirect_to @page
@@ -28,7 +28,7 @@ class PagesController < ApplicationController
     
   def update
     @page = Page.find(params[:id])
-    
+
     if @page.update(page_params)
       redirect_to @page
     else
